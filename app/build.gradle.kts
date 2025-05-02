@@ -1,7 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.kotlinAndroid)
     id("com.google.gms.google-services")
 }
 
@@ -39,8 +38,8 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+    implementation(libs.androidxCoreKtx)
+    implementation(libs.androidxAppcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
@@ -49,10 +48,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //Import the Firebase BoM
-    implentation(platform("com.google.firebase:firebase-bom:32.8.1"))
-
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
     implementation("com.google.firebase:firebase-analytics")
-
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
 }
